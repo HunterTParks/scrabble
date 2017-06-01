@@ -31,5 +31,12 @@ namespace ScrabbleScoreProjectObjects
       Word newWord = new Word("FHVWY");
       Assert.Equal(20, newWord.FindPoints());
     }
+
+    [Fact]
+    public void IsLetter_FivePoints_5()
+    {
+      Word newWord = new Word("K");
+      Assert.Equal(5, newWord.FindPoints());
+    }
   }
 }
