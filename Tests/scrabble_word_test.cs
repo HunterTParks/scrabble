@@ -17,5 +17,19 @@ namespace ScrabbleScoreProjectObjects
       Word newWord = new Word("DG");
       Assert.Equal(4, newWord.FindPoints());
     }
+
+    [Fact]
+    public void IsLetter_ThreePoint_12()
+    {
+      Word newWord = new Word("BCMP");
+      Assert.Equal(12, newWord.FindPoints());
+    }
+
+    [Fact]
+    public void IsLetter_FourPoints_20()
+    {
+      Word newWord = new Word("FHVWY");
+      Assert.Equal(20, newWord.FindPoints());
+    }
   }
 }
