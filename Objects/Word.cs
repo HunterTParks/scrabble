@@ -29,6 +29,7 @@ namespace ScrabbleScoreProjectObjects
     public void AddPoints()
     {
       _points += _counter;
+      ;
     }
     public int FindPoints()
     {
@@ -39,43 +40,43 @@ namespace ScrabbleScoreProjectObjects
         {
           _counter = 1;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else if (_refactor[i] == 'd' || _refactor[i] == 'g' )
         {
           _counter = 2;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else if (_refactor[i] == 'b' || _refactor[i] == 'c' || _refactor[i] == 'm' || _refactor[i] == 'p' )
         {
           _counter = 3;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else if (_refactor[i] == 'f' || _refactor[i] == 'h' || _refactor[i] == 'v' || _refactor[i] == 'w' || _refactor[i] == 'y')
         {
           _counter = 4;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else if(_refactor[i] == 'k')
         {
           _counter = 5;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else if(_refactor[i] == 'j' || _refactor[i] == 'x')
         {
           _counter = 8;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
         else
         {
           _counter = 10;
           AddPoints();
-          Console.WriteLine(_points);
+
         }
       }
       int test = GetPoints();
