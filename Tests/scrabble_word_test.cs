@@ -45,5 +45,12 @@ namespace ScrabbleScoreProjectObjects
       Word newWord = new Word("JX");
       Assert.Equal(16, newWord.FindPoints());
     }
+
+    [Fact]
+    public void IsLetter_TenPoints_20()
+    {
+      Word newWord = new Word("QZ");
+      Assert.Equal(20, newWord.FindPoints());
+    }
   }
 }

@@ -71,6 +71,12 @@ namespace ScrabbleScoreProjectObjects
           AddPoints();
           Console.WriteLine(_points);
         }
+        else
+        {
+          _counter = 10;
+          AddPoints();
+          Console.WriteLine(_points);
+        }
       }
       int test = GetPoints();
       return test;
