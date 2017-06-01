@@ -8,12 +8,14 @@ namespace ScrabbleScoreProjectObjects
     private string _word;
     public char[] _refactor;
     private int _points;
+    public int _counter;
 
     public Word(string word)
     {
       _word = word;
       _points = 0;
       _refactor = ChangeIntoString();
+      _counter = 0;
     }
 
     public string GetWord()
@@ -26,7 +28,7 @@ namespace ScrabbleScoreProjectObjects
     }
     public void AddPoints()
     {
-      _points++;
+      _points += _counter;
     }
     public int FindPoints()
     {
@@ -35,6 +37,13 @@ namespace ScrabbleScoreProjectObjects
       {
         if(_refactor[i] == 'a' || _refactor[i] == 'e' || _refactor[i] == 'i' || _refactor[i] == 'o' || _refactor[i] == 'u' || _refactor[i] == 'l' || _refactor[i] == 'r' || _refactor[i] == 'n' || _refactor[i] == 's' || _refactor[i] == 't')
         {
+          _counter = 1;
+          AddPoints();
+          Console.WriteLine(_points);
+        }
+        else if (_refactor[i] == 'd' || _refactor[i] == 'g' )
+        {
+          _counter = 2;
           AddPoints();
           Console.WriteLine(_points);
         }
