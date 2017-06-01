@@ -65,6 +65,12 @@ namespace ScrabbleScoreProjectObjects
           AddPoints();
           Console.WriteLine(_points);
         }
+        else if(_refactor[i] == 'j' || _refactor[i] == 'x')
+        {
+          _counter = 8;
+          AddPoints();
+          Console.WriteLine(_points);
+        }
       }
       int test = GetPoints();
       return test;
